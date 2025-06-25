@@ -1,0 +1,10 @@
+{
+    "name": "@vibe-bot/infra-local-postgres",
+    "version": "1.0.0",
+    "description": "The local infrastructure for postgres",
+    "scripts": {
+        "infra:local:start": "docker compose -p vibe-bot up -d",
+        "infra:local:stop": "docker compose -p vibe-bot down"
+    },
+    "packageManager": "pnpm@10.12.1"
+}

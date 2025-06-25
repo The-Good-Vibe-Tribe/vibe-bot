@@ -1,0 +1,14 @@
+{
+    "name": "@vibe-bot/root",
+    "version": "1.0.0",
+    "description": "An open-source discord bot",
+    "keywords": [
+        "discord"
+    ],
+    "author": "The Good Vibe Tribe",
+    "license": "ISC",
+    "packageManager": "pnpm@10.12.1",
+    "devDependencies": {
+        "turbo": "^2.5.4"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "ui": "tui",
+    "tasks": {
+        "build": {
+            "dependsOn": [
+                "^build"
+            ]
+        },
+        "infra:local:start": {},
+        "infra:local:stop": {}
+    }
+}
