@@ -8,11 +8,18 @@ source "${SCRIPT_DIR}/modules/nvm-source.sh"
 
 check_env_file() {
   FILE_PATH="./infra/local/postgres/.env"
+  FILE_PATH_BOT="./apps/bot/.env"
 
   if [ -f "$FILE_PATH" ]; then
     echo "The file $FILE_PATH exists."
   else
-    echo "Error: The file $FILE_PATH does not exist." >&2
+    echo "Error: The file $FILE_PATH does not exist. Make sure to use the .env.sample file to create a .env file with your secrets." >&2
+  fi
+
+  if [ -f "$FILE_PATH_BOT" ]; then
+    echo "The file $FILE_PATH_BOT exists."
+  else
+    echo "Error: The file $FILE_PATH_BOT does not exist. Make sure to use the .env.sample file to create a .env file with your secrets." >&2
   fi
 }
 
