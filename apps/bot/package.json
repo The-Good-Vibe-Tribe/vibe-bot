@@ -1,0 +1,23 @@
+{
+    "name": "@vibe-bot/bot",
+    "version": "1.0.0",
+    "scripts": {
+        "build:watch": "tsc --build --watch",
+        "build:dev": "tsc --build",
+        "build": "tsc --noEmit && node esbuild.config.js",
+        "start": "node dist/index.js",
+        "start:watch": "nodemon --watch dist --exec \"node dist/index.js\"",
+        "migrate:discord": "node ./dist/createCommands.js"
+    },
+    "type": "module",
+    "packageManager": "pnpm@10.12.1",
+    "devDependencies": {
+        "esbuild": "^0.25.5",
+        "nodemon": "^3.1.10"
+    },
+    "dependencies": {
+        "discord.js": "^14.20.0",
+        "dotenv": "^16.5.0",
+        "typescript": "^5.8.3"
+    }
+}

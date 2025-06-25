@@ -4,9 +4,45 @@
         "build": {
             "dependsOn": [
                 "^build"
+            ],
+            "outputs": [
+                "dist"
+            ],
+            "cache": true
+        },
+        "build:watch": {
+            "dependsOn": [
+                "build:dev"
+            ],
+            "cache": false,
+            "persistent": true,
+            "interactive": true
+        },
+        "start:watch": {
+            "dependsOn": [
+                "build:dev"
+            ],
+            "cache": false,
+            "persistent": true,
+            "interactive": true
+        },
+        "build:dev": {
+            "cache": true,
+            "outputs": [
+                "dist"
             ]
         },
-        "infra:local:start": {},
-        "infra:local:stop": {}
+        "migrate:discord": {
+            "cache": false,
+            "dependsOn": [
+                "build:dev"
+            ]
+        },
+        "infra:local:start": {
+            "cache": false
+        },
+        "infra:local:stop": {
+            "cache": false
+        }
     }
 }
