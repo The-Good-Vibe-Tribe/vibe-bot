@@ -46,7 +46,7 @@ local-infra-down:
 
 # Run the applications
 dev:
-	pnpm exec turbo run dev
+	pnpm exec turbo run build:watch start:watch
 
 # Migrate discord slash commands to the lastest version
 migrate-discord:
